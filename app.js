@@ -6,10 +6,25 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
-var project = require('./routes/project');
+var my_profile = require('./routes/myProfile');
+var settings = require('./routes/settings');
+var groups = require('./routes/groups');
+var ginfo = require('./routes/groupsinfo');
+var logoff = require('./routes/logOff');
+var login = require('./routes/login');
+var contact = require('./routes/contact');
+var add_new_account = require('./routes/addNewAccount');
+var search_result = require('./routes/searchResult');
+var search_result_all = require('./routes/searchResultAll');
+var select_info = require('./routes/selectInfo');
+var confirm = require('./routes/confirm');
+var done = require('./routes/done');
+var create_new_acc = require('./routes/createNewAcc');
+var edit_profile = require('./routes/editProfile');
+var add = require('./routes/editProfile');
 // Example route
 // var user = require('./routes/user');
 
@@ -37,8 +52,24 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/project/:name', project.viewProject);
-//app.get('/project', project.viewProject);
+app.get('/my-profile', my_profile.view);
+app.get('/settings', settings.view);
+app.get('/groups', groups.view);
+app.get('/groupsInfo/:id', ginfo.gInfo);
+app.get('/logoff', logoff.view);
+app.get('/login', login.view);
+app.get('/contact/:id', contact.view);
+app.get('/add_new_account', add_new_account.view);
+app.get('/search_result', search_result.view);
+app.get('/search_result_all', search_result_all.view);
+app.get('/select_info', select_info.view);
+app.get('/confirm', confirm.view);
+app.get('/done', done.view);
+app.get('/create-account', create_new_acc.view);
+app.get('/edit-profile', edit_profile.view);
+app.get('/add', add.addInfo);
+//app.get('/project/:id', project.projectInfo);
+//app.get('/palette', palette.randomPalette);
 // Example route
 // app.get('/users', user.list);
 

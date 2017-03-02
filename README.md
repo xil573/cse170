@@ -1,7 +1,7 @@
-# cse170
+lab6
+====
 
-hello from readme-edit!!
-
-hahahaha
-
-Sindy
+Lab 6: AJAX
+# cse170_project
+# cse170_project_verB
+# cse170_project_verB
